@@ -5,6 +5,8 @@ VisualStudioVersion = 15.0.28307.1062
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OnlineTicariOtomasyon", "OnlineTicariOtomasyon\OnlineTicariOtomasyon.csproj", "{BC720EC6-A644-4D3D-8D6F-6CF541AD5C44}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Api", "Api\Api.csproj", "{B087267D-79FB-48B1-B525-22542118C2C2}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -15,6 +17,10 @@ Global
 		{BC720EC6-A644-4D3D-8D6F-6CF541AD5C44}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{BC720EC6-A644-4D3D-8D6F-6CF541AD5C44}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{BC720EC6-A644-4D3D-8D6F-6CF541AD5C44}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B087267D-79FB-48B1-B525-22542118C2C2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B087267D-79FB-48B1-B525-22542118C2C2}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B087267D-79FB-48B1-B525-22542118C2C2}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B087267D-79FB-48B1-B525-22542118C2C2}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
