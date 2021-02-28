@@ -1,0 +1,20 @@
+﻿@model OnlineTicariOtomasyon.Models.Sınıflar.Kategori
+@{
+    ViewBag.Title = "KategoriEkle";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+<script src="~/Scripts/jquery-3.3.1.js"></script>
+<h2>Yeni Kategori Ekle</h2>
+<br />
+<form class="form-group" method="post">
+    @Html.LabelFor(x=>x.KategoriAd)
+    @Html.TextBoxFor(x=> x.KategoriAd,new { @class = "form-control" })
+    <br />
+    <button class="btn btn-info" id="btn1">Kaydet</button>
+    <script>
+        $('#btn1').click(function() {
+        alert("kategori Başarılı Bir Şekilde Eklendi")
+        });
+    </script>
+</form>
+
