@@ -22,7 +22,7 @@ namespace OnlineTicariOtomasyon.Models.Sınıflar
         [StringLength(6)]
         public string FaturaSıraNo { get; set; }
 
-        [Display(Name = "Cari Adı")]
+       
         public DateTime Tarih { get; set; }
 
         [Column(TypeName = "Char")]
