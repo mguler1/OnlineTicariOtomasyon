@@ -7,16 +7,15 @@
 
 <h2>Personel Listesi</h2>
 <br />
-<table class="table table-striped">
+<table class="table table-striped table-sm">
     <tr>
         @*<th>PERSONEL ID</th>*@
         <th>PERSONEL AD</th>
         <th>PEROSNEL SOYAD</th>
         <th>RESİM</th>
         <th>ÇALIŞTIĞI DEPARTMAN</th>
-        <th>SİL</th>
-        <th>GÜNCELLE</th>
-        <th>SATIŞLAR</th>
+        <th>İŞLEM</th>
+       
     </tr>
     @foreach (var x in Model)
     {
@@ -30,11 +29,11 @@
 
 
             <td>@x.Departman.DepartmanAd</td>
-            <td><a href="/Personel/PersonelSil/@x.PersonelID" class="btn btn-danger">Sil</a></td>
-            <td><a href="/Personel/PersonelGetir/@x.PersonelID" class="btn btn-success">Güncelle</a></td>
-            <td><a href="/Departman/DepartmanPersonelSatis/@x.PersonelID" class="btn btn-info">Satış Geçmişi</a></td>
+            <td><a href="/Personel/PersonelSil/@x.PersonelID" class="btn btn-danger btn-sm">Sil</a>
+            <a href="/Personel/PersonelGetir/@x.PersonelID" class="btn btn-success btn-sm">Güncelle</a>
+            <a href="/Departman/DepartmanPersonelSatis/@x.PersonelID" class="btn btn-info btn-sm">Satış Geçmişi</a></td>
         </tr>
     }
 </table>
 
-<a href="/Personel/PersonelEkle" class="btn btn-primary">Yeni Personel</a>
+<a href="/Personel/PersonelEkle" class="btn btn-primary btn-sm">Yeni Personel</a>

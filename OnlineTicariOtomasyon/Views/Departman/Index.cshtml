@@ -6,27 +6,26 @@
 }
 
 <br />
-<h2>Departman Listesi</h2>
 <br />
-<table class="table table-bordered">
+<table class="table table-bordered table-sm mt-3 ">
     <tr>
-        @*<th>ID</th>*@
+      
         <th>DEPARTMAN ADI</th>
-       
-        <th>Sil</th>
-        <th>Güncelle</th>
-        <th>Detay</th>
+        <th>İŞLEM</th>
+
     </tr>
     @foreach (var u in Model)
     {
         <tr>
-            @*<td>@u.DepartmanID</td>*@
+          
             <td>@u.DepartmanAd</td>
-           
-            <td><a href="/Departman/DepartmanSil/@u.DepartmanID" class="btn btn-danger">Sil</a></td>
-            <td><a href="/Departman/DepartmanGetir/@u.DepartmanID" class="btn btn-success">Güncelle</a></td>
-            <td><a href="/Departman/DepartmanDetay/@u.DepartmanID" class="btn btn-info">Detay</a></td>
+
+            <td>
+                <a href="/Departman/DepartmanSil/@u.DepartmanID" class="btn btn-danger btn-sm">Sil</a>
+                <a href="/Departman/DepartmanGetir/@u.DepartmanID" class="btn btn-success btn-sm">Güncelle</a>
+                <a href="/Departman/DepartmanDetay/@u.DepartmanID" class="btn btn-info btn-sm">Detay</a>
+            </td>
         </tr>
     }
 </table>
-<a href="/Departman/DepartmanEkle" class="btn btn-primary">Yeni Departman</a>        
+<a href="/Departman/DepartmanEkle" class="btn btn-primary btn-sm">Yeni Departman</a>        

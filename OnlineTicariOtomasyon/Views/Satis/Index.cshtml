@@ -7,10 +7,10 @@
 
 <h2>Satış Listesi</h2>
 <br />
-<table id="tbl1" class="table table-striped">
+<table id="tbl1" class="table table-striped table-sm">
     <thead>
         <tr>
-            @*<th>SATIŞ ID</th>*@
+           
             <th>ÜRÜN</th>
             <th>TARİH</th>
             <th>ADET</th>
@@ -18,15 +18,15 @@
             <th>TOPLAM TUTAR</th>
             <th>MÜŞTERİ</th>
             <th>PERSONEL</th>
-            <th>GÜNCELLE</th>
-            <th>DETAYLAR</th>
+            <th>İŞLEM</th>
+
      
         </tr>
     </thead>
     @foreach (var x in Model)
     {
     <tr>
-        @*<td>@x.SatisID</td>*@
+      
         <td>@x.Urun.UrunAd</td>
         <td>@Convert.ToDateTime(x.Tarih).ToString("dd/MM/yyyy")</td>
         <td>@x.Adet</td>
@@ -35,14 +35,14 @@
         <td>@x.Cari.CariAd @x.Cari.CariSoyad</td>
         <td>@x.Personel.PersonelAd @x.Personel.PersonelSoyad</td>
 
-        <td><a href="/Satis/SatisGetir/@x.SatisID" class="btn btn-success">Güncelle</a></td>
-        <td><a href="/Satis/SatisDetay/@x.SatisID" class="btn btn-info">Satış Geçmişi</a></td>
+        <td><a href="/Satis/SatisGetir/@x.SatisID" class="btn btn-success btn-sm">Güncelle</a>
+        <a href="/Satis/SatisDetay/@x.SatisID" class="btn btn-info btn-sm">Satış Geçmişi</a></td>
 
     </tr>
     }
 </table>
 
-<a href="/Satis/YeniSatis" class="btn btn-primary">Yeni Satış</a>
+<a href="/Satis/YeniSatis" class="btn btn-primary btn-sm">Yeni Satış</a>
 @*<link href="~/Content/bootstrap.css" rel="stylesheet" />*@
 
 <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>

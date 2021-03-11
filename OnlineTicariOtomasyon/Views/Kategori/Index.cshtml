@@ -6,22 +6,21 @@
     ViewBag.Title = "Index";
 Layout = "~/Views/Shared/_AdminLayout.cshtml";
 }
-<br />
-<h2>Kategori Listesi </h2>
-<table class="table table-bordered" style="margin-top:20px">
+
+<table class="table table-bordered table-sm" style="margin-top:20px">
     <tr>
         @*<th>ID</th>*@
         <th>KATEGORİ ADI</th>
-        <th>Sil</th>
-        <th>Güncelle</th>
+        <th>İŞLEM</th>
+     
     </tr>
     @foreach(var k in Model)
     {
         <tr>
             @*<td>@k.KategoriD</td>*@
             <td>@k.KategoriAd</td>
-            <td ><a href="/Kategori/KategoriSil/@k.KategoriD"class="btn btn-danger">Sil</a></td>
-            <td ><a href="/Kategori/KategoriGetir/@k.KategoriD"class="btn btn-success">Güncelle</a></td>
+            <td ><a href="/Kategori/KategoriSil/@k.KategoriD"class="btn btn-danger btn-sm">Sil</a>
+            <a href="/Kategori/KategoriGetir/@k.KategoriD"class="btn btn-success btn-sm">Güncelle</a></td>
         </tr>
     }
     
@@ -34,4 +33,4 @@ new PagedListRenderOptions {
         "page-link"
     }
 } )
-<a href="/Kategori/KategoriEkle" class="btn btn-primary">Yeni Kategori</a>
+<a href="/Kategori/KategoriEkle" class="btn btn-primary btn-sm">Yeni Kategori</a>

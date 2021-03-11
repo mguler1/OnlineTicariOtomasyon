@@ -12,10 +12,9 @@
         <input type="submit" value="Ara" />
     </p>
 }
+
 <br />
-<h2>Kargo Listesi</h2>
-<br />
-<table class="table table-bordered">
+<table class="table table-bordered table-sm">
     <tr>
         <th>Personel</th>
         <th>Alıcı</th>
@@ -30,8 +29,8 @@
         <td>@u.Alici</td>
         <td>@u.TakipKodu</td>
         <td>@Convert.ToDateTime(u.Tarih).ToString("dd/MM/yyyy")</td>
-        <td><a href="/Kargo/KargoDetay/@u.TakipKodu" class="btn btn-info">Detay</a></td>
+        <td><a href="/Kargo/KargoDetay/@u.TakipKodu" class="btn btn-info btn-sm">Detay</a></td>
     </tr>
     }
 </table>
-<a href="/Kargo/YeniKargo" class="btn btn-primary">Yeni Kargo Girişi</a>        
+<a href="/Kargo/YeniKargo" class="btn btn-primary btn-sm ">Yeni Kargo Girişi</a>        

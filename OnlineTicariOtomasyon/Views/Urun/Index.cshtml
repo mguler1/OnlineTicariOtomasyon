@@ -15,7 +15,7 @@
 <br />
 <h2>Ürün Listesi</h2>
 <br />
-<table class="table table-bordered">
+<table class="table table-bordered table-sm">
     <tr>
         <th>ÜRÜN ADI</th>
         <th>MARKA</th>
@@ -23,9 +23,8 @@
         <th>ALIŞ FİYATI</th>
         <th>SATIŞ FİYATI</th>
         <th>KATEGORİ</th>
-        <th>SİL</th>
-        <th>GÜNCELLE</th>
-        <th>YENİ SATIŞ</th>
+        <th>İŞLEMLER</th>
+       
     </tr>
         @foreach (var u in Model)
         {
@@ -37,10 +36,10 @@
         <td>@u.SatisFiyat ₺</td>
         <td>@u.Kategori.KategoriAd</td>
        
-        <td><a href="/Urun/Urunsil/@u.UrunID" class="btn btn-danger">Sil</a></td>
-        <td><a href="/Urun/UrunGetir/@u.UrunID" class="btn btn-success">Güncelle</a></td>
-        <td><a href="/Urun/SatisYap/@u.UrunID" class="btn btn-warning">Satış Yap</a></td>
+        <td><a href="/Urun/Urunsil/@u.UrunID" class="btn btn-danger btn-sm">Sil</a>
+        <a href="/Urun/UrunGetir/@u.UrunID" class="btn btn-success btn-sm">Güncelle</a>
+        <a href="/Urun/SatisYap/@u.UrunID" class="btn btn-warning btn-sm">Satış Yap</a></td>
     </tr>
             }
 </table>
-<a href="/Urun/YeniUrun" class="btn btn-primary">Yeni Ürün</a>
+<a href="/Urun/YeniUrun" class="btn btn-primary btn-sm">Yeni Ürün</a>

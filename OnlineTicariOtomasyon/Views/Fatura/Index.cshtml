@@ -7,7 +7,7 @@
 
 <h2>Fatura Listesi</h2>
 <br />
-<table id="tbl1" class="table table-striped">
+<table id="tbl1" class="table table-striped table-sm">
     <thead>
         <tr>
             <th>FATURA SERİ NO</th>
@@ -16,9 +16,8 @@
             <th>SAAT</th>
             <th>VERGİ DAİRESİ</th>
             <th>TOPLAM</th>
-            <th>GÜNCELLE</th>
-            <th>DETAYLAR</th>
-            <th>YENİ KALEM</th>
+            <th>İŞLEM</th>
+           
         </tr>
     </thead>
     @foreach (var x in Model)
@@ -30,17 +29,17 @@
         <td>@x.Saat</td>
         <td>@x.VergiDairesi</td>
         <td>@x.Toplam ₺</td>
-        <td><a href="/Fatura/FaturaGetir/@x.FaturaID" class="btn btn-info">Güncelle</a></td>
-        <td><a href="/Fatura/FaturaDetay/@x.FaturaID" class="btn btn-info">Satış Geçmişi</a></td>
-        <td><a href="/Fatura/FaturaDetay/@x.FaturaID" class="btn btn-info">Kalem</a></td>
+        <td><a href="/Fatura/FaturaGetir/@x.FaturaID" class="btn btn-info btn-sm">Güncelle</a>
+        <a href="/Fatura/FaturaDetay/@x.FaturaID" class="btn btn-info btn-sm">Satış Geçmişi</a>
+        <a href="/Fatura/FaturaDetay/@x.FaturaID" class="btn btn-info btn-sm">Kalem</a></td>
 
     </tr>
     }
 </table>
 
-<a href="/Fatura/FaturaEkle" class="btn btn-primary">Yeni Fatura</a>
-<br /> <br />
-<button type="button" class="btn btn-info"data-toggle="modal" data-target="#Modal1">PopUp Penceresi</button>
+<a href="/Fatura/FaturaEkle" class="btn btn-primary btn-sm">Yeni Fatura</a>
+
+<button type="button" class="btn btn-info btn-sm"data-toggle="modal" data-target="#Modal1">PopUp Penceresi</button>
 <div class="modal" id="Modal1">
     <div class="modal-dialog">
         <div class="modal-content">

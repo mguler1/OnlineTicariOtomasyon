@@ -4,19 +4,16 @@
     ViewBag.Title = "Index";
     Layout = "~/Views/Shared/_AdminLayout.cshtml";
 }
-<br />
-<h2>Cari Listesi</h2>
-<br />
-<table class="table table-striped">
+
+<table class="table table-striped table-sm mt-5">
     <tr>
         @*<th>CARİ ID</th>*@
         <th>CARİ AD</th>
         <th>CARİ SOYAD</th>
         <th>ŞEHİR</th>
         <th>MAİL</th>
-        <th>SİL</th>
-        <th>GÜNCELLE</th>
-        <th>DETAYLAR</th>
+        <th>İŞLEMLER</th>
+       
     </tr>
     @foreach (var x in Model)
     {
@@ -26,11 +23,11 @@
             <td>@x.CariSoyad</td>
             <td>@x.CariSehir</td>
             <td>@x.CariMail</td>
-            <td><a href="/Cari/CariSil/@x.CariID" class="btn btn-danger">Sil</a></td>
-            <td><a href="/Cari/CariGetir/@x.CariID" class="btn btn-success">Güncelle</a></td>
-            <td><a href="/Cari/CariDetay/@x.CariID" class="btn btn-info">Satış Geçmişi</a></td>
+            <td><a href="/Cari/CariSil/@x.CariID" class="btn btn-danger btn-sm">Sil</a>
+            <a href="/Cari/CariGetir/@x.CariID" class="btn btn-success btn-sm">Güncelle</a>
+            <a href="/Cari/CariDetay/@x.CariID" class="btn btn-info btn-sm">Satış Geçmişi</a></td>
         </tr>
     }
 </table>
 
-<a href="/Cari/CariEkle" class="btn btn-primary">Yeni Cari</a>       
+<a href="/Cari/CariEkle" class="btn btn-primary btn-sm">Yeni Cari</a>       
